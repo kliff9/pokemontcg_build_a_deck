@@ -1,0 +1,22 @@
+{
+  "name": "pokemony",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "build a Card deck",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix ./Frontend && npm run build --prefix ./Frontend",
+    "Frontend": "npm start --prefix ./Frontend",
+    "START": "concurrently \"npm run start\" \"npm run Frontend\"",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.0.14",
+    "path": "^0.12.7"
+  }
+}

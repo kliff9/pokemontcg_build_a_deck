@@ -1,0 +1,75 @@
+
+.dim {
+    height: 450px;
+    width: 320px;
+}
+
+.bouder {
+    border: 10px solid silver;
+    border-radius: 20px;
+}
+.Name_Background {
+    position: absolute;
+    top:9px;
+    left:22px;
+    border-radius: 5px 5px 0px 0px;
+    font-family: 'Pokemon Solid', sans-serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+    background: linear-gradient(to bottom right, #ffffa4,#fff870,#fff200,#fff870,#ffffa4,#fff870);   
+    width: 301px;
+}
+.Card_Div {
+    position: relative;
+    margin: 10px;
+}
+.energy {
+    position: absolute;
+    top:2px;
+    right:2px;
+ 
+}
+.move1 {
+    display:flex;
+    position: absolute;
+    top:50%;
+    left:6%;
+    width: 320px;
+}
+
+.energy_move {
+    margin-right: 2px;
+}
+.energy_sizeTop {
+    height: 30px;
+    width: 30px; 
+}
+.energy_size {
+    height: 23px;
+    width: 23px; 
+    display: inline-block;
+    align-self:center;
+}
+.MoveDamage {
+    position: absolute;
+    right:15%; 
+    font-weight:700;
+    color:white;
+     display: inline-block;
+    align-self: flex-end;
+}
+.MoveDescription {
+    position: absolute;
+margin-top: 50px;
+    left:0; 
+     font-weight:700;
+    color:white;
+    width:90%;
+}
+.Move_Name {
+    display: inline-block;
+    align-self: flex-end;
+    font-weight:700;
+    color:white
+
+}
