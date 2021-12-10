@@ -6,7 +6,7 @@ import deck_Router from './Router/DecksRouter.js';
 import path from 'path'
 
 const app = express();
-const port =  8000;
+const port =  process.env.PORT || 8000;
 
 
 
