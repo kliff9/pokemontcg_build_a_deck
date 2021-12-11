@@ -59,3 +59,13 @@
     width: 100% ; 
     /* margin-bottom: -50px; Quick Fix for space on bottom */
     }
+
+    @media (min-width: 375px) {
+
+    .middlediv {
+      position: absolute;
+      top: 50%;
+      left: 50%; 
+    width: 300px;
+      }
+      }

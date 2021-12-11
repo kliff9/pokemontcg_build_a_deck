@@ -116,3 +116,63 @@ header {
 
 }
 
+
+@media (min-width: 375px) {
+
+	.ul{
+		
+		border-radius:90px 90px 90px 90px;
+	
+	}
+
+	ul li a{
+		padding: 0 15px;
+	}
+	ul li a .icon{
+		width: 30px; /* changing the width of the icon */
+		height: 30px; /* changing the height of the icon */
+		
+
+	}
+
+	}
+	
+	/* Min-width 768px */
+	
+	 @media (min-width: 768px) {
+		.ul{
+		
+			border-radius:90px 90px 90px 90px;
+		
+		}
+		.li {
+	
+		}
+		ul li a{
+			padding: 0 35px;
+		}
+		ul li a .icon{
+			width: 35px; /* changing the width of the icon */
+			height: 35px; /* changing the height of the icon */
+			
+	
+		}
+	
+	}
+	@media (min-width:961px) {  
+		.ul{
+		
+			border-radius:150px 50px 90px 0px;
+		
+		}
+	
+		ul li a{
+			padding: 0 80px;
+		}
+		ul li a .icon{
+			width: 40px; /* changing the width of the icon */
+			height: 40px; /* changing the height of the icon */
+			
+	
+		}
+	}

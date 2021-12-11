@@ -23,7 +23,7 @@ export default function DeckScreen() {
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <div className="row">         
+        <div className="deckrow">         
         {decks.map((deck) => (            
           <Deck key={deck._id} deck={deck}> </Deck> ))        
 

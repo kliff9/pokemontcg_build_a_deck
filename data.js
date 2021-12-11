@@ -86,7 +86,97 @@ PokemonCards: [
     description: "Description Text"
 
     }]
-   },
+   },{   
+    Deck_Name: 'Deck 3',
+    Deck_img:'/img/MasterBallDeck.png',
+    Cards: [
+    {
+        name: "Zaptos",
+        type: "electric",
+        image: "/img/ZAptos450.jpg",
+        energy:['electric', 'electric'],
+        description: "Description Text",
+    },
+    {
+        name: "Zaptos",
+        type: "electric",
+        image: "/img/ZAptos450.jpg",
+        energy:['electric', 'electric'],
+        description: "Description Text"
+
+
+    },
+    {
+    name: "Zaptos",
+    type: "electric",
+    image: "/img/ZAptos450.jpg",
+    energy:['electric', 'electric', 'electric'],
+    description: "Description Text"
+
+
+    },
+    {
+    name: "Zaptos",
+    type: "electric",
+    image: "/img/ZAptos450.jpg",
+    energy:['electric', 'electric', 'electric', 'electric'],
+    description: "Description Text"
+
+    },
+    {
+    name: "Zaptos",
+    type: "electric",
+    image: "/img/ZAptos450.jpg",
+    energy:['electric', 'electric', 'electric', 'electric'],
+    description: "Description Text"
+
+    }]
+   },{   
+    Deck_Name: 'Deck 4',
+    Deck_img:'/img/MasterBallDeck.png',
+    Cards: [
+    {
+        name: "Zaptos",
+        type: "electric",
+        image: "/img/ZAptos450.jpg",
+        energy:['electric', 'electric'],
+        description: "Description Text",
+    },
+    {
+        name: "Zaptos",
+        type: "electric",
+        image: "/img/ZAptos450.jpg",
+        energy:['electric', 'electric'],
+        description: "Description Text"
+
+
+    },
+    {
+    name: "Zaptos",
+    type: "electric",
+    image: "/img/ZAptos450.jpg",
+    energy:['electric', 'electric', 'electric'],
+    description: "Description Text"
+
+
+    },
+    {
+    name: "Zaptos",
+    type: "electric",
+    image: "/img/ZAptos450.jpg",
+    energy:['electric', 'electric', 'electric', 'electric'],
+    description: "Description Text"
+
+    },
+    {
+    name: "Zaptos",
+    type: "electric",
+    image: "/img/ZAptos450.jpg",
+    energy:['electric', 'electric', 'electric', 'electric'],
+    description: "Description Text"
+
+    }]
+   }
 
 ], 
     pokecard: 

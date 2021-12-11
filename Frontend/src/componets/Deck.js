@@ -12,7 +12,7 @@ export default function Deck(P) {
 
         <div className="cardd">
     <Link to={`/mydecks/${deck._id}`}> 
-  <img src={deck.Deck_img} alt="Picture" className="medium" />
+    <div className="medium"><img src={deck.Deck_img} alt="Picture" ></img></div>
   </Link>
   <div className="card-body">
   <h2>{deck.Deck_Name}</h2>
