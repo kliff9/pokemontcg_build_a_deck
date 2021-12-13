@@ -16,7 +16,7 @@
     background-color: black;
 
   }
-
+/* ------------------Media------------ */
 @media (min-width: 375px) 
 {
   .row {
@@ -31,13 +31,12 @@
 
   }
 .dim {
-    height: 200px;
-    width: 170px;
+    height: 190px;
+    width: 165px;
 }
 
 .Name_Background {
-  position: absolute;
-  top:9px;
+top:9px;
   left:22px;
   width: 160px;
 }
@@ -47,7 +46,9 @@
 
 }
 .Card_Div {
-  /* width:auto */
+  width:auto;
+  margin: 1px;
+
 }
 .energy {
   position: absolute;
@@ -56,39 +57,29 @@
 
 }
 .move1 {
-  display:flex;
-  position: absolute;
-  top:50%;
-  left:6%;
-  width: 100%;
+  /* display:none; */
+  width: 90%;
+  left:12%
+
 }
-
-
-
 .MoveDamage {
   position: absolute;
-  right:15%; 
+  right:20%; 
   font-weight:700;
-  color:white;
-   display: inline-block;
-  align-self: flex-end;
+  font-size: 6px;
 }
 .MoveDescription {
-  position: absolute;
-margin-top: 50px;
-  left:0; 
-   font-weight:700;
-  color:white;
-  width:100% ;
-  font-size:12px;
+  margin-top: 30px;
+  left:15px;
+  font-size: 6px;
+  width:80%;
 }
 .Move_Name {
-  display: inline-block;
-  align-self: flex-end;
-  font-weight:700;
-  color:white
+font-size: 6px;
 
 }
+
+
 }
   
     
