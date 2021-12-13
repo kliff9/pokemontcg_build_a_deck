@@ -53,6 +53,11 @@ export default function CardSlider() {
   return (
     <Swiper
       // install Swiper modules
+      /*     <Swiper modules={[EffectFade]} effect="fade">
+      {[1, 2, 3].map((i, el) => {
+        return <SwiperSlide>Slide {el}</SwiperSlide>;
+      })}
+    </Swiper>*/
       modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]}
       effect="coverflow"
       spaceBetween={20}

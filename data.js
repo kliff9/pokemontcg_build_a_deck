@@ -39,6 +39,14 @@ PokemonCards: [
     energy:['electric', 'electric', 'electric', 'electric'],
     description: "Description Text"
 
+    },
+    {
+    name: "Zaptos",
+    type: "electric",
+    image: "/img/ZAptos450.jpg",
+    energy:['electric', 'electric', 'electric', 'electric'],
+    description: "Description Text"
+
     }]
 },  
    {   
