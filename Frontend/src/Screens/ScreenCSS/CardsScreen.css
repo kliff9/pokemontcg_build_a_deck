@@ -38,7 +38,7 @@
 .Name_Background {
 top:9px;
   left:22px;
-  width: 160px;
+  width: 145px;
 }
 
 .swiper-button-next:after, .swiper-button-prev:after{
@@ -46,7 +46,7 @@ top:9px;
 
 }
 .Card_Div {
-  width:auto;
+  width:170px;
   margin: 1px;
 
 }
@@ -58,7 +58,7 @@ top:9px;
 }
 .move1 {
   /* display:none; */
-  width: 90%;
+  width: 160px;
   left:12%
 
 }
@@ -70,7 +70,7 @@ top:9px;
 }
 .MoveDescription {
   margin-top: 30px;
-  left:15px;
+  left:10px;
   font-size: 6px;
   width:80%;
 }
