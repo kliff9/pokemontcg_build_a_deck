@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 import data from './data.js';
 import card_Router from './Router/CardsRouter.js';
 import deck_Router from './Router/DecksRouter.js';
+import user_Router from './Router/UserRouter.js';
+
 import path from 'path'
 
 const app = express();
@@ -25,6 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/decks', deck_Router);
 app.use('/api/cards', card_Router);
+app.use('/api/players', user_Router);
 
 
 //  app.get('/api/decks', (req, res) => {

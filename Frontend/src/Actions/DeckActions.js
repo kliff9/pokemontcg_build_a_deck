@@ -23,23 +23,23 @@ import Axios from "axios";
  
  
  
-//  export const AddtoDeck = (productId, qty) => async (dispatch, getState) => {
-//     const { data } = await Axios.get(`/api/products/${productId}`);
+ export const AddtoDeck = (cardId) => async (dispatch, getState) => {
+    const { data } = await Axios.get(`/api/cards/${cardId}`);
 
-//     dispatch({
+    dispatch({
 
-//        type: CARD_ADD_ITEM,
-//        payload: { // adding to card
-//          name: data.name,
-//          image: data.image,
-//          type: data.type,
-//          energy: data.energy,
-//          description: data.description,
-//          card: data.id
-//        }
-//      });
-// // //     localStorage.setItem('cardItems', JSON.stringify(getState().cart.cartItems));
-//     }
+       type: CARD_ADD_ITEM,
+       payload: { // adding to card
+         name: data.name,
+         image: data.image,
+         type: data.type,
+         energy: data.energy,
+         description: data.description,
+         card_: data.id
+       }
+     });
+    localStorage.setItem('deckItems', JSON.stringify(getState().deckList.decks));
+    }
 
 
     export const detailsDECK = (deckId) => async(dispatch) => {

@@ -1,23 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import './PokeCard.css'
+
 import { Link } from 'react-router-dom'
+import PokeCardModel from "../Screens/Model";
 
 export default function PokeCard(P) {
     const { Pokemon } = P 
 
-
-      function ener() { for (let i = 0; i < 4; i++) {
-        //   if (Pokemon.energy[i]) {
-        //     <img src={`/img/type_${Pokemon.energy[i]}.png`} alt="Picture" className=""></img>
-
-        //   }
-          <img src={`/img/type_${Pokemon.energy[i]}.png`} alt="Picture" className=""></img>
-
-    }
-}
+ 
     
     return (
         <React.Fragment>
+ 
+
 
             <div key={Pokemon._id} className="Card_Div">
                 <Link to={`/cards/${Pokemon._id}`}> 
@@ -37,11 +32,6 @@ export default function PokeCard(P) {
                     <p className="MoveDescription">{Pokemon.Move_Description}This Attack does Something you may not think it dose nothing but in truth it does something so be prepared to get some damaged done to you bro.</p>
 
                 </div>
-
-
-                
-
-
 
             </div>
 

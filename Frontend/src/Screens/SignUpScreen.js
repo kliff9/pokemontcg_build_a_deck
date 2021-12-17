@@ -1,8 +1,11 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './ScreenCSS/LoginScreen.css'
 export default function SignUpScreen() {
 
     return(
+      <React.Fragment>
+
         <div class="login">
   <h1>Signup</h1>
     <form method="post">
@@ -17,5 +20,7 @@ export default function SignUpScreen() {
     </form>
 
 </div>
+</React.Fragment>
+
     )
 }

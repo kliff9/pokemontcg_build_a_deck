@@ -84,7 +84,7 @@ export default function EditDeck(P) {
           
            <div className="row center">         
              {DECK.Cards.map((pokemon) => (            
-             <ExistingCard key={pokemon._id} Pokemon={pokemon}> </ExistingCard>))  }      
+             <ExistingCard key={pokemon._id} Pokemon={pokemon}> </ExistingCard> ))  }      
   </div> 
   </div>
       )}

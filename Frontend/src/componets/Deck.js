@@ -6,7 +6,6 @@ export default function Deck(P) {
     const { deck } = P 
 
 
-
     return (
       <React.Fragment>
 
@@ -16,7 +15,8 @@ export default function Deck(P) {
   </Link>
   <div className="card-body">
   <h2>{deck.Deck_Name}</h2>
-  <button> </button>
+ <Link to={`/mydecks/${deck._id}/post`}><button> post </button>
+ </Link>
 </div>
 </div>
 </React.Fragment>

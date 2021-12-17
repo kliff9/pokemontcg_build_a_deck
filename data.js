@@ -1,6 +1,26 @@
-
+import bcrypt from 'bcryptjs'
+// Hashing is called one way because it's practically impossible to get the original text from a hash.
 
 const data = {
+     users: [
+        {
+            name:'2kliff',
+            gender: 'Male',
+            birthday: 'August 23',
+            email: 'admin@example.com',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: true,
+        },
+        {
+            name:'Eren',
+            gender: 'Male',
+            birthday: 'October 23',
+            email: 'Eren@gmail.com',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: false,
+            
+        }
+    ],
 
 PokemonCards: [
     {   

@@ -63,9 +63,7 @@ top:9px;
 
 }
 .MoveDamage {
-  position: absolute;
   right:20%; 
-  font-weight:700;
   font-size: 6px;
 }
 .MoveDescription {
@@ -84,12 +82,28 @@ font-size: 6px;
   
     
  @media (min-width: 768px) 
+ 
 {
-  
+  .row {
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+  .swiper {
+    width: auto;
+    right: 25px;
+
+  }
 
  }
 @media (min-width:961px) 
 {  
+  .swiper {
+    width: auto;
+    /* right: 25px; */
+
+  }
   .dim {
     height: 450px;
     width: 320px;
@@ -145,6 +159,8 @@ font-size: 6px;
   color:white;
    display: inline-block;
   align-self: flex-end;
+  font-size: 17px;
+
 }
 .MoveDescription {
   position: absolute;
@@ -153,12 +169,15 @@ margin-top: 50px;
    font-weight:700;
   color:white;
   width:90%;
+  font-size: 17px;
+
 }
 .Move_Name {
   display: inline-block;
   align-self: flex-end;
   font-weight:700;
-  color:white
+  color:white;
+  font-size: 17px;
 
 }
 }

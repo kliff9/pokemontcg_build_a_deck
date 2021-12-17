@@ -25,5 +25,17 @@ card_Router.get(
     })
   );
 
+  card_Router.get(
+    '/:id',
+    expressAsyncHandler(async (req, res) => {
+      const _card = await Card.findById(req.params.id);
+      if (_card) {
+        res.send(_card);
+      } else {
+        res.status(404).send({ message: 'Product Not Found'   });
+      }
+    })
+  );
+
 
 export default card_Router

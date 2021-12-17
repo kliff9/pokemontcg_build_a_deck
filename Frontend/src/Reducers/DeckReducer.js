@@ -12,7 +12,12 @@ export const deckListReducer = (state = {loading: true , decks: [] }, action) =>
 
       case DECK_LIST_FAIL:
           return {loading: false, error: action.payload}
-      
+        case CARD_ADD_ITEM:
+            const card = action.payload
+        // return  { ...state, decks: [...state.deckList,card] }
+        console.log('statecards: ',  state.deckList.Cards)
+        return  { ...state, decks: [...state.deckList.Cards, card] }
+
       default:
           return state;
   }
@@ -32,6 +37,7 @@ export const DeckDetailsReducer = (
       return { loading: false, DECK: action.payload };
     case DECK_DETAILS_FAIL:
       return { loading: false, error: action.payload };
+
     default:
       return state;
   }
