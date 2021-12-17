@@ -1,6 +1,6 @@
 import express from 'express'
 import data from '../data.js'
-import User from '../models/UserModel.js'
+import User from '../Models/UserModel.js'
 import expressAsyncHandler from 'express-async-handler'; 
 import bcrypt from 'bcryptjs'
 import { generateToken, isAuth } from '../utilis.js';
