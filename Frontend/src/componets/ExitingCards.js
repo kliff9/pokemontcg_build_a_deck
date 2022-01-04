@@ -8,36 +8,13 @@ import { AddtoDeck, listDecks } from "../Actions/DeckActions";
 export default function ExistingCard(P) {
   const { Pokemon } = P;
 
-  const dispatch = useDispatch();
-
-  const deckList = useSelector((state) => state.deckList);
-  const { decks } = deckList;
-
-  useEffect(() => {
-    dispatch(listDecks());
-  }, []);
-
-  const params = useParams();
-  const { id: cardId } = params;
-  console.log('cardId: ', cardId)
-
-  console.log('Pokemon._id: ', Pokemon._id)
-
-
-
-
-  useEffect(() => {
-    if (cardId) {
-      dispatch(AddtoDeck(cardId));
-    }
-  }, [dispatch, cardId]);
 
   return (
     <React.Fragment>
       <div key={Pokemon._id} className="Card_Div">
-        <Link to={`/cards/${Pokemon._id}`}>
+        {/* <Link to={`cards/${Pokemon._id}`}> */}
           <img src={Pokemon.image} alt="Picture" className="bouder dim"></img>
-        </Link>
+        {/* </Link> */}
 
         <div className="Name_Background">
           {Pokemon.name}
@@ -64,7 +41,7 @@ export default function ExistingCard(P) {
           </p>
         </div>
         <button
-        onClick={AddtoDeck(Pokemon._id)}>Add</button>
+         onClick={console.log('click')}>Remove</button> 
       </div>
     </React.Fragment>
   );

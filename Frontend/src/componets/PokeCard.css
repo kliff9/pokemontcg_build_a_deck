@@ -73,3 +73,10 @@ margin-top: 50px;
     color:white
 
 }
+.Card_Div_model {
+    position: relative;
+    margin: 10px;
+    height: 90%;
+    width: 90%;
+}
+

@@ -1,4 +1,4 @@
-import { CARD_ADD_ITEM, DECK_DETAILS_FAIL, DECK_DETAILS_REQUEST, DECK_DETAILS_SUCCESS, DECK_LIST_FAIL, DECK_LIST_REQUEST, DECK_LIST_SUCCESS } from "../Constants/DeckConstants";
+import { CARD_ADD_ITEM, DECK_CARDS_SUCCESS, DECK_CREATE_FAIL, DECK_CREATE_REQUEST, DECK_CREATE_SUCCESS, DECK_DELETE_FAIL, DECK_DELETE_REQUEST, DECK_DELETE_SUCCESS, DECK_DETAILS_FAIL, DECK_DETAILS_REQUEST, DECK_DETAILS_SUCCESS, DECK_LIST_FAIL, DECK_LIST_REQUEST, DECK_LIST_SUCCESS, DECK_UPDATE_FAIL, DECK_UPDATE_REQUEST, DECK_UPDATE_SUCCESS, RESET_STATE } from "../Constants/DeckConstants";
 import Axios from "axios";
 
 
@@ -7,11 +7,18 @@ import Axios from "axios";
   dispatch({
   type: DECK_LIST_REQUEST
   });
+  // dispatch({
+  //   type: RESET_STATE
+  //   });
+
   try {
        const  { data } = await Axios.get('/api/decks');
+
       dispatch({
-          type: DECK_LIST_SUCCESS, payload: data 
+          type: DECK_LIST_SUCCESS, payload: data
+
       })
+
   } catch(error) {
       dispatch({
           type: DECK_LIST_FAIL, payload:error.message
@@ -31,14 +38,16 @@ import Axios from "axios";
        type: CARD_ADD_ITEM,
        payload: { // adding to card
          name: data.name,
-         image: data.image,
          type: data.type,
+         image: data.image,
          energy: data.energy,
          description: data.description,
-         card_: data.id
+         _id: data._id
        }
      });
     localStorage.setItem('deckItems', JSON.stringify(getState().deckList.decks));
+    // localStorage.clear();
+
     }
 
 
@@ -66,3 +75,59 @@ import Axios from "axios";
           }
         };
     
+        export const createDeck = (Deck_Name, Deck_img) => async (dispatch, getState) => {
+          dispatch({ type: DECK_CREATE_REQUEST });
+          // const {
+          //   userSignin: { userInfo },
+          // } = getState();
+          try {
+            const { data } = await Axios.post('/api/decks', { Deck_Name, Deck_img})
+
+            dispatch({
+              type: DECK_CREATE_SUCCESS,
+              payload: data.deck,
+              
+            });
+
+          } catch (error) {
+            const message =
+              error.response && error.response.data.message
+                ? error.response.data.message
+                : error.message;
+            dispatch({ type: DECK_CREATE_FAIL, payload: message });
+          }
+        };
+
+        export const update_deck = (deck) => async (dispatch, getState) => {
+          dispatch({ type: DECK_UPDATE_REQUEST, payload: deck });
+;
+          try {
+            const { data } = await Axios.put(`/api/decks/${deck._id}`, deck, {
+            });
+            dispatch({ type: DECK_UPDATE_SUCCESS, payload: data });
+          } catch (error) {
+            const message =
+              error.response && error.response.data.message
+                ? error.response.data.message
+                : error.message;
+            dispatch({ type: DECK_UPDATE_FAIL, error: message });
+          }
+        };
+
+
+        export const delete_deck = (deckId) => async (dispatch, getState) => {
+          dispatch({ type: DECK_DELETE_REQUEST, payload: deckId });
+
+          try {
+            const { data } = await Axios.delete(`/api/decks/${deckId}`)
+            dispatch({ type: DECK_DELETE_SUCCESS });
+          } catch (error) {
+            const message =
+              error.response && error.response.data.message
+                ? error.response.data.message
+                : error.message;
+            dispatch({ type: DECK_DELETE_FAIL, payload: message });
+          }
+        };
+
+

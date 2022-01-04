@@ -5,17 +5,13 @@ const Deck_Schema = new mongoose.Schema(
   {
     // deck: {type: mongoose.Schema.Types.ObjectId},
     Deck_Name: { type: String, required: true, unique: true },
-    Deck_img: { type: String, required: true },
+    Deck_img: { type: String },
     Cards: [{
-    card_: { type: mongoose.Schema.Types.ObjectId,
-       ref: 'Card',
-     required: true,
-    },
-        name: { type: String, required: true },
-        image: { type: String, required: true },
-        type: { type: String, required: true },
+        name: { type: String  },
+        image: { type: String },
+        type: { type: String },
         energy: [String],
-        description: { type: String, required: true },
+        description: { type: String },
     }],
 
 

@@ -2,7 +2,7 @@ import './index.css';
 import './bootstrap/css/bootstrap.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookOpen, faHome,  faShareAltSquare, faSignInAlt, faUser } from '@fortawesome/free-solid-svg-icons';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import HomeScreen from './Screens/HomeScreen';
 import CardsScreen from './Screens/CardsScreen';
@@ -14,13 +14,27 @@ import EditDeck from './Screens/EditDeck';
 import PostScreen from './Screens/PostScreen';
 import { useDispatch, useSelector } from "react-redux";
 import ProfileScreen from './Screens/UserProfile';
-import PokeCardModel from './Screens/Model';
+import PokeCardModel from './Screens/PokeCardModel';
+import Modal_Pop from './componets/Model_Pop';
 
+// const BUTTON_WRAPPER_STYLES = {
+//     position: 'relative',
+//     zIndex: 1
+//   }
+  
+//   const OTHER_CONTENT_STYLES = {
+//     position: 'relative',
+//     zIndex: 2,
+//     backgroundColor: 'red',
+//     padding: '10px'
+//   }
 
 function App() {
 
     const userSignin = useSelector(state => state.userSignin); 
     const { userInfo } = userSignin;
+    // const [isOpen, setIsOpen] = useState(false)
+
 
   return (
     <React.Fragment>
@@ -80,6 +94,7 @@ function App() {
   </header>
   <main>
 
+ 
   <Routes>
 
   <Route path="/" element={<HomeScreen />} exact></Route>
@@ -89,9 +104,10 @@ function App() {
   <Route path="/login" element={<LogInScreen />} ></Route>
   <Route path="/Signup" element={<SignUpScreen />} ></Route>
   <Route path="/mydecks/:id" element={<EditDeck />} ></Route>
-  <Route path="/mydecks/:id/post" element={<PostScreen />} ></Route>
+  {/* <Route path="/mydecks/:id/post" element={<PostScreen />} ></Route> */}
   <Route path="/profile" element={<ProfileScreen />} ></Route>
-  <Route path="/cards/:id" element={<PokeCardModel />} ></Route>
+  {/* <Route path="/cards/:id" element={<PokeCardModel />} ></Route> */}
+  {/* <Route path="/mydecks/:id/cards/:id" element={<PokeCardModel />} ></Route> */}
 
 
 

@@ -1,4 +1,4 @@
-import { CARD_ADD_ITEM, CARD_DETAILS_FAIL, CARD_DETAILS_REQUEST, CARD_DETAILS_SUCCESS, CARD_LIST_FAIL, CARD_LIST_REQUEST, CARD_LIST_SUCCESS } from "../Constants/CardConstants";
+import { CARD_ADD_ITEM, CARD_DELETE_FAIL, CARD_DELETE_REQUEST, CARD_DELETE_SUCCESS, CARD_DETAILS_FAIL, CARD_DETAILS_REQUEST, CARD_DETAILS_SUCCESS, CARD_LIST_FAIL, CARD_LIST_REQUEST, CARD_LIST_SUCCESS } from "../Constants/CardConstants";
 import Axios from "axios";
 
 
@@ -47,3 +47,17 @@ export const CardDetails = (cardId) => async(dispatch) => {
 
  
  
+    export const delete_card = (cardId) => async (dispatch, getState) => {
+        dispatch({ type: CARD_DELETE_REQUEST, payload: cardId });
+
+        try {
+          const { data } = await Axios.delete(`/api/cards/${cardId}`)
+          dispatch({ type: CARD_DELETE_SUCCESS });
+        } catch (error) {
+          const message =
+            error.response && error.response.data.message
+              ? error.response.data.message
+              : error.message;
+          dispatch({ type: CARD_DELETE_FAIL, payload: message });
+        }
+      };

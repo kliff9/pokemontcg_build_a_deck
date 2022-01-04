@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Hourglass } from "react-spinners-css";
-import { detailsDECK, listDecks } from "../Actions/DeckActions";
+import { detailsDECK, listDecks, update_deck } from "../Actions/DeckActions";
 import MessageBox from "../componets/MessageBox";
 import PokeCard from "../componets/PokeCard";
 
@@ -16,7 +16,7 @@ import { EffectCoverflow } from 'swiper';
 import 'swiper/modules/effect-coverflow/effect-coverflow.scss';
 import ExistingCard from "../componets/ExitingCards";
 import { useParams } from "react-router";
-import DeckScreen from "./DeckScreen";
+import CardsScreen from "./CardsScreen";
 
 
 export default function EditDeck(P) {
@@ -29,7 +29,7 @@ export default function EditDeck(P) {
   const params = useParams();
   const { id: deckId } = params;
 
-
+console.log('Deck:', DECK)
 
 
   useEffect(() => {
@@ -37,9 +37,15 @@ export default function EditDeck(P) {
 
   }, [dispatch, deckId]);
 
-  console.log('deckId',deckId)
+  const updateHandler = (e) => {
+     e.preventDefault();
+    dispatch(update_deck({
+      _id: deckId,
+      Cards: DECK.Cards}));
+  };
 
-  // console.log('DECKcards', DECK.Cards)
+  // console.log('deckId',deckId)
+
 
   // const deckList = useSelector((state) => state.deckList);
   // const { loading, decks, error } = deckList;
@@ -58,6 +64,7 @@ export default function EditDeck(P) {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <div>
+          <button onClick={updateHandler}>Save</button>
         <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]}
@@ -72,7 +79,7 @@ export default function EditDeck(P) {
       >
         <div className="row center">         
             {DECK.Cards.map((pokemon) => (            
-             <SwiperSlide><PokeCard key={pokemon._id} Pokemon={pokemon}> </PokeCard></SwiperSlide>
+             <SwiperSlide><ExistingCard key={pokemon._id} Pokemon={pokemon}> </ExistingCard></SwiperSlide>
           ))        
   
             }
@@ -82,13 +89,13 @@ export default function EditDeck(P) {
       
           
           
-           <div className="row center">         
+           {/* <div className="row center">         
              {DECK.Cards.map((pokemon) => (            
              <ExistingCard key={pokemon._id} Pokemon={pokemon}> </ExistingCard> ))  }      
-  </div> 
+  </div> */}
   </div>
       )}
-                      
+              <CardsScreen></CardsScreen>        
    </React.Fragment>
     
   ); // end of return

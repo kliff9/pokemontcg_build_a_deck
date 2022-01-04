@@ -42,31 +42,6 @@ PokemonCards: [
         description: "Description Text"
 
 
-    },
-    {
-    name: "Zzaptos",
-    type: "electric",
-    image: "/img/ZAptos450.jpg",
-    energy:['electric', 'electric', 'electric'],
-    description: "Description Text"
-
-
-    },
-    {
-    name: "Zaptos",
-    type: "electric",
-    image: "/img/ZAptos450.jpg",
-    energy:['electric', 'electric', 'electric', 'electric'],
-    description: "Description Text"
-
-    },
-    {
-    name: "Zaptos",
-    type: "electric",
-    image: "/img/ZAptos450.jpg",
-    energy:['electric', 'electric', 'electric', 'electric'],
-    description: "Description Text"
-
     }]
 },  
    {   
@@ -116,7 +91,7 @@ PokemonCards: [
     }]
    },{   
     Deck_Name: 'Deck 3',
-    Deck_img:'/img/MasterBallDeck.png',
+    Deck_img:'/deck_select_img/Red_Deck_3.jfif',
     Cards: [
     {
         name: "Zaptos",

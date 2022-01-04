@@ -53,6 +53,8 @@ useEffect(() => {
           placeholder="Username"
           required="required"
           onChange={usernameChangeHandler}
+          className="login_input"
+
         />
         <input
           type="password"
@@ -60,6 +62,7 @@ useEffect(() => {
           placeholder="Password"
           required="required"
           onChange={passwordChangeHandler}
+          className="login_input"
 
         />
         <button type="submit" class="btn btn-primary btn-block btn-large">
