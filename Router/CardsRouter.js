@@ -38,20 +38,6 @@ card_Router.get(
     })
   );
 
-  card_Router.delete(
-    '/:id',
-    expressAsyncHandler(async (req, res) => {
-      console.log(req.params.id);
-      // if( !mongoose.Types.ObjectId.isValid(req.params._id) ) return false;
 
-      const card = await Card.findById(req.params.id);
-      if (card) {
-        const delete_card = await card.deleteOne();
-        res.send({ message: 'Card Deleted', card: delete_card });
-      } else {
-        res.status(404).send({ message: 'Card Not Found' });
-      }
-    })
-  );
 
 export default card_Router

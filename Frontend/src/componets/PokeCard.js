@@ -1,5 +1,5 @@
-import { Link, useParams } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import React, {  useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AddtoDeck } from "../Actions/DeckActions";
 import './PokeCard.css'
@@ -7,33 +7,17 @@ import PokeCardModel from "../Screens/PokeCardModel";
 
 
 
-const BUTTON_WRAPPER_STYLES = {
-    position: 'relative',
-    zIndex: 1
-  }
-  
-  const OTHER_CONTENT_STYLES = {
-    position: 'relative',
-    zIndex: 2,
-    backgroundColor: 'red',
-    padding: '10px'
-  }
+
 
 export default function PokeCard(P) {
     const { Pokemon } = P 
 
     const dispatch = useDispatch();
-    const deckList = useSelector((state) => state.deckList);
-    const { decks } = deckList;
+
    
     console.log('poke_card: Pokemon._id: ', Pokemon._id)
 
-    // useEffect(() => {
-    //     if (Pokemon._id) {
-
-    //     dispatch(AddtoDeck(Pokemon._id));
-    //     }
-    // }, [dispatch, Pokemon._id]);
+ 
         const [isOpen, setIsOpen] = useState(false)
 
     return (
@@ -57,7 +41,7 @@ export default function PokeCard(P) {
                     <p className="MoveDescription">{Pokemon.Move_Description}This Attack does Something you may not think it dose nothing but in truth it does something so be prepared to get some damaged done to you bro.</p>
 
                 </div>
-                <button onClick={ () => dispatch(AddtoDeck(Pokemon._id))  }>Add</button>
+                <button className="btn btn-primary btn-block btn-large" onClick={ () => dispatch(AddtoDeck(Pokemon._id))  }>Add</button>
             </div>
 
 
@@ -82,7 +66,7 @@ export default function PokeCard(P) {
                     <p className="MoveDescription">{Pokemon.Move_Description}This Attack does Something you may not think it dose nothing but in truth it does something so be prepared to get some damaged done to you bro.</p>
 
                 </div>
-                <button onClick={ () => dispatch(AddtoDeck(Pokemon._id))  }>Add</button>
+                <button className="btn btn-primary btn-block btn-large" onClick={ () => dispatch(AddtoDeck(Pokemon._id))  }>Add</button>
             </div>
             </div>
                    </PokeCardModel>

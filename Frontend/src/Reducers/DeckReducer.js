@@ -1,5 +1,6 @@
 import {
   CARD_ADD_ITEM,
+  CARD_REMOVE_ITEM,
   DECK_CREATE_FAIL,
   DECK_CREATE_REQUEST,
   DECK_CREATE_SUCCESS,
@@ -9,6 +10,7 @@ import {
   DECK_DETAILS_FAIL,
   DECK_DETAILS_REQUEST,
   DECK_DETAILS_SUCCESS,
+  DECK_EMPTY,
   DECK_LIST_FAIL,
   DECK_LIST_REQUEST,
   DECK_LIST_SUCCESS,
@@ -74,6 +76,17 @@ export const DeckDetailsReducer = (
          return {
         ...state, DECK: { ...state.DECK, Cards: [...state.DECK.Cards, card]}
            };
+        case CARD_REMOVE_ITEM:
+            return {
+              ...state,
+           DECK: { ...state.DECK, Cards: [...state.DECK.Cards.filter((x) => x._id !== action.payload)]}
+
+             // cartItems: state.cartItems.filter((x) => x.product !== action.payload),
+            };
+      case DECK_EMPTY:
+       return {
+          ...state, 
+          DECK: { ...state.DECK, Cards: []}}
     default:
       return state;
   }

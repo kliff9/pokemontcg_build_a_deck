@@ -1,7 +1,7 @@
 import './ScreenCSS/Model.css'
 import ReactDom from 'react-dom'
 import { useParams } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CardDetails } from '../Actions/CardActions ';
 import { Hourglass } from 'react-spinners-css';

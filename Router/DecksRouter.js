@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import express from 'express'
 import expressAsyncHandler from 'express-async-handler'; 
 import Deck from '../Models/DecksModel.js'
+import Card from "../Models/CardsModel.js";
 
 
 const deck_Router = express.Router()
@@ -80,6 +81,22 @@ deck_Router.get(
       if (deck) {
         const delete_deck = await deck.deleteOne();
         res.send({ message: 'Deck Deleted', deck: delete_deck });
+      } else {
+        res.status(404).send({ message: 'Deck Not Found' });
+      }
+    })
+  );
+
+  deck_Router.delete(
+    '/:id',
+    expressAsyncHandler(async (req, res) => {
+      const deckId = req.params.id;
+      const deck = await Deck.findById(deckId);
+      const Deck_Cards = deck.Cards
+      if (deck) {
+        const _card = await Card.findById(req.params.id);
+        const delete_card_in_deck = await _card.deleteOne();
+        res.send({ message: 'card Deleted', Deck_Cards: req.body.Cards });
       } else {
         res.status(404).send({ message: 'Deck Not Found' });
       }

@@ -65,7 +65,7 @@ useEffect(() => {
           className="login_input"
 
         />
-        <button type="submit" class="btn btn-primary btn-block btn-large">
+        <button type="submit" className="btn btn-primary btn-block btn-large">
           Log In
         </button>
         <Link to="/signup">Dont Have a Account? Sign Up</Link>

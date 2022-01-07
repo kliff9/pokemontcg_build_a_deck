@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
 import { Hourglass } from "react-spinners-css";
-import { detailsDECK, listDecks, update_deck } from "../Actions/DeckActions";
+import { detailsDECK,  update_deck } from "../Actions/DeckActions";
 import MessageBox from "../componets/MessageBox";
-import PokeCard from "../componets/PokeCard";
 
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
@@ -17,6 +15,7 @@ import 'swiper/modules/effect-coverflow/effect-coverflow.scss';
 import ExistingCard from "../componets/ExitingCards";
 import { useParams } from "react-router";
 import CardsScreen from "./CardsScreen";
+import { DECK_EMPTY } from "../Constants/DeckConstants";
 
 
 export default function EditDeck(P) {
@@ -44,17 +43,11 @@ console.log('Deck:', DECK)
       Cards: DECK.Cards}));
   };
 
-  // console.log('deckId',deckId)
+ 
 
-
-  // const deckList = useSelector((state) => state.deckList);
-  // const { loading, decks, error } = deckList;
-
-  // useEffect(() => {
-  //   dispatch(listDecks());
-  // }, []);
-
-
+  const EmptyHandler = () => {
+    dispatch({ type: DECK_EMPTY  })
+    }
 
   return (
     <React.Fragment>
@@ -64,7 +57,10 @@ console.log('Deck:', DECK)
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <div>
-          <button onClick={updateHandler}>Save</button>
+          
+          <button className="btn btn-primary btn-block btn-large" onClick={updateHandler}>Save</button>
+          <button className="btn btn-primary btn-block btn-large" onClick={EmptyHandler}>Clear</button>
+
         <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]}
@@ -85,14 +81,8 @@ console.log('Deck:', DECK)
             }
         </div>
     </Swiper>
-  
-      
-          
-          
-           {/* <div className="row center">         
-             {DECK.Cards.map((pokemon) => (            
-             <ExistingCard key={pokemon._id} Pokemon={pokemon}> </ExistingCard> ))  }      
-  </div> */}
+    
+    
   </div>
       )}
               <CardsScreen></CardsScreen>        
@@ -101,24 +91,3 @@ console.log('Deck:', DECK)
   ); // end of return
   }
 
-// return (
-    // <Swiper
-    //   // install Swiper modules
-    //   modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]}
-    //   effect="coverflow"
-    //   spaceBetween={20}
-    //   slidesPerView={3}
-    //   navigation
-    //   pagination={{ clickable: true }}
-    //   scrollbar={{ draggable: true }}
-    //   onSwiper={(swiper) => console.log(swiper)}
-    //   onSlideChange={() => console.log('slide change')}
-    // >
-    //   <div className="row center">         
-    //       {PokemonCards.map((pokemon) => (            
-    //        <SwiperSlide><PokeCard key={pokemon._id} Pokemon={pokemon}> </PokeCard></SwiperSlide>
-//           ))};
-    //     </div>
-    // </Swiper>
-//   );
-// };

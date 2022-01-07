@@ -13,12 +13,7 @@ const BUTTON_WRAPPER_STYLES = {
   zIndex: 1
 }
 
-const OTHER_CONTENT_STYLES = {
-  position: 'relative',
-  zIndex: 2,
-  backgroundColor: 'red',
-  padding: '10px'
-}
+
 
 export default function DeckScreen() {
   const deckList = useSelector((state) => state.deckList);
@@ -32,28 +27,37 @@ export default function DeckScreen() {
   }, []);
 
   return (
+    
     <React.Fragment>
       {loading ? (
         <Hourglass color="purple" />
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
+        <div>
         <div className="deckrow">         
         {decks.map((deck) => (            
           <Deck key={deck._id} deck={deck}> </Deck> ))        
 
       }
+
+ 
             </div>
-      )}
+            
 
-<div style={BUTTON_WRAPPER_STYLES} onClick={() => console.log('clicked')}>
-        <button onClick={() => setIsOpen(true)}> Create </button>
+            <div style={BUTTON_WRAPPER_STYLES} onClick={() => console.log('clicked')}>
+<button className="btn btn-primary btn-block btn-large" onClick={() => setIsOpen(true)}> Create </button>
 
-        <Modal_Pop open={isOpen} onClose={() => setIsOpen(false)}>
-          <Create_Form ></Create_Form >
+<Modal_Pop open={isOpen} onClose={() => setIsOpen(false)}>
+  <Create_Form ></Create_Form >
 
-        </Modal_Pop>
-      </div>
+</Modal_Pop>
+</div>
+</div>
+      ) }
+ 
+
+
 
     </React.Fragment>
     

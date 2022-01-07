@@ -110,3 +110,7 @@ margin: 0 auto;
        
        }
 	}
+  .btn-blockdelete {
+    display: block;
+    width: 50%;
+  }

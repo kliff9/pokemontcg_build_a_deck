@@ -116,6 +116,25 @@ header {
 
 }
 
+.dropdown {
+	display: inline-block;
+	position: relative;
+  }
+  .dropdown-content {
+	position: absolute;
+	display: none;
+	right: 0;
+	min-width: 12rem;
+	padding: 1rem;
+	z-index: 1;
+	background-color: #203040;
+	margin: 0;
+	margin-top: 0.4rem;
+	border-radius: 0.5rem;
+  }
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
 
 @media (min-width: 375px) {
 
@@ -141,7 +160,7 @@ header {
 	
 	 @media (min-width: 768px) {
 		.ul{
-		
+		top:5%;
 			border-radius:90px 90px 90px 90px;
 		
 		}
@@ -161,7 +180,8 @@ header {
 	}
 	@media (min-width:961px) {  
 		.ul{
-		
+			top:4.5%;
+
 			border-radius:150px 50px 90px 0px;
 		
 		}
@@ -176,3 +196,10 @@ header {
 	
 		}
 	}
+	@media (min-width:1366px) 
+{
+	.ul{
+		top:5%;
+		
+		}
+}

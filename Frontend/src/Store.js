@@ -1,6 +1,6 @@
 import {createStore, compose, applyMiddleware, combineReducers } from 'redux'
 import  thunk from 'redux-thunk'
-import { cardDetailsReducer, cardListReducer } from './Reducers/CardReducer';
+import {  cardDetailsReducer, cardListReducer } from './Reducers/CardReducer';
 import { deckCreateReducer, deckDeleteReducer, DeckDetailsReducer, deckListReducer, DeckUpdateReducer } from './Reducers/DeckReducer';
 import { userSigninReducer } from './Reducers/UserReducer';
 
@@ -29,7 +29,7 @@ const reducer = combineReducers({
   cardDetails: cardDetailsReducer,
   createdeck: deckCreateReducer,
   deck_Update: DeckUpdateReducer,
-  deckdelete: deckDeleteReducer
+  deckdelete: deckDeleteReducer,
 
 })
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { delete_deck } from "../Actions/DeckActions";
+import { DECK_EMPTY } from "../Constants/DeckConstants";
 import './Deck.css'
 export default function Deck(P) {
 
@@ -10,6 +11,8 @@ export default function Deck(P) {
     const dispatch = useDispatch();
 
     // const deckdelete = useSelector((state) => state.deckdelete);
+
+
 
     const deleteHandler = () => {
       // dispatch(delete_deck(deck._id));
@@ -29,7 +32,7 @@ console.log('deck ID: ',  deck._id)
   </Link>
   <div className="card-body">
   <h2>{deck.Deck_Name}</h2>
-  <button onClick={deleteHandler}>Delete</button>
+  <button className="btn btn-primary  btn-blockdelete btn-large" onClick={deleteHandler}>Delete</button>
  {/* <Link to={`/mydecks/${deck._id}/post`}><button> post </button>
  </Link> */}
 </div>

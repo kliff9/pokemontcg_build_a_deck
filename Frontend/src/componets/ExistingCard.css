@@ -1,0 +1,32 @@
+.Name_Background_E {
+    position: absolute;
+    top:9px;
+    left:10px;
+    border-radius: 5px 5px 0px 0px;
+    font-family: 'Pokemon Solid', sans-serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+    background: linear-gradient(to bottom right, #ffffa4,#fff870,#fff200,#fff870,#ffffa4,#fff870);   
+    width: 301px;
+}
+
+@media (min-width: 375px) 
+{
+
+}
+
+@media (min-width: 768px) 
+{
+.Name_Background_E {
+    width: 145px;
+
+}
+}
+@media (min-width:961px) 
+{
+    .Name_Background_E {
+        width: 301px;
+    
+    }
+
+}
