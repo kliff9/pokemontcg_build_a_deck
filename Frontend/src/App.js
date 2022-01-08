@@ -110,7 +110,6 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomeScreen />} exact></Route>
-          {/* <Route path="/mydecks" element={<DeckScreen />}></Route> */}
           <Route path="/mydecks" element={<DeckScreen />}></Route>
           <Route path="/login" element={<LogInScreen />}></Route>
           <Route path="/Signup" element={<SignUpScreen />}></Route>
