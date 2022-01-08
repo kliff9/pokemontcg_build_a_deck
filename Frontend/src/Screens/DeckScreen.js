@@ -19,7 +19,6 @@ export default function DeckScreen() {
   const deckList = useSelector((state) => state.deckList);
   const { loading, decks, error } = deckList;
   const dispatch = useDispatch();
-  console.log(decks)
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {

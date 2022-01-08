@@ -139,7 +139,8 @@ header {
 @media (min-width: 375px) {
 
 	.ul{
-		
+		top:5.5%;
+
 		border-radius:90px 90px 90px 90px;
 	
 	}
@@ -164,9 +165,7 @@ header {
 			border-radius:90px 90px 90px 90px;
 		
 		}
-		.li {
-	
-		}
+
 		ul li a{
 			padding: 0 35px;
 		}

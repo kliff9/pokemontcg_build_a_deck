@@ -1,30 +1,22 @@
 import "./ExistingCard.css";
-import { Link } from "react-router-dom";
-import React  from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { removeFromDeck } from "../Actions/DeckActions";
-
-
 
 export default function ExistingCard(P) {
   const { Pokemon } = P;
 
-  
   const dispatch = useDispatch();
 
-
   const delete_card_handler = () => {
-    console.log('removed')
-      dispatch(removeFromDeck(Pokemon._id));
-      
-  }
+    console.log("removed");
+    dispatch(removeFromDeck(Pokemon._id));
+  };
 
   return (
     <React.Fragment>
       <div key={Pokemon._id} className="Card_Div">
-        {/* <Link to={`cards/${Pokemon._id}`}> */}
-          <img src={Pokemon.image} alt="Picture" className="bouder dim"></img>
-        {/* </Link> */}
+        <img src={Pokemon.image} alt="Picture" className="bouder dim"></img>
 
         <div className="Name_Background_E">
           {Pokemon.name}
@@ -46,12 +38,15 @@ export default function ExistingCard(P) {
           <h5 className="Move_Name"> Zapper Strike {Pokemon.MoveName}</h5>
           <h5 className="MoveDamage"> 70 {Pokemon.Damage}</h5>
           <p className="MoveDescription">
-            {Pokemon.Move_Description}This Attack does Something you may not
-            think it dose nothing.          {Pokemon._id}
+            {Pokemon.description}
           </p>
         </div>
-        <button className="btn btn-primary btn-block btn-large"
-         onClick={delete_card_handler}>Remove</button> 
+        <button
+          className="btn btn-primary btn-block btn-large"
+          onClick={delete_card_handler}
+        >
+          Remove
+        </button>
       </div>
     </React.Fragment>
   );
