@@ -115,7 +115,6 @@ function App() {
           <Route path="/Signup" element={<SignUpScreen />}></Route>
           <Route path="/mydecks/:id" element={<EditDeck />}></Route>
           <Route path="/profile" element={<ProfileScreen />}></Route>
-          {/* <Route path="/mydecks/:id/cards/:id" element={<PokeCardModel />} ></Route> */}
         </Routes>
       </main>
     </React.Fragment>

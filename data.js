@@ -1,5 +1,4 @@
 import bcrypt from "bcryptjs";
-// Hashing is called one way because it's practically impossible to get the original text from a hash.
 
 const data = {
   users: [

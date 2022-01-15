@@ -87,9 +87,6 @@ export const detailsDECK = (deckId) => async (dispatch) => {
 export const createDeck =
   (Deck_Name, Deck_img) => async (dispatch, getState) => {
     dispatch({ type: DECK_CREATE_REQUEST });
-    // const {
-    //   userSignin: { userInfo },
-    // } = getState();
     try {
       const { data } = await Axios.post("/api/decks", { Deck_Name, Deck_img });
 

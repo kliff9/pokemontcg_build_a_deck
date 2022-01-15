@@ -4,7 +4,6 @@ import { Hourglass } from "react-spinners-css";
 import { detailsDECK, update_deck } from "../Actions/DeckActions";
 import MessageBox from "../componets/MessageBox";
 
-// import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import "swiper/swiper-bundle.min.css";
