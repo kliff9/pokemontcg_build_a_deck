@@ -34,3 +34,9 @@
     width: 301px;
   }
 }
+
+@media (min-width: 1366px) {
+  .Name_Background_E {
+    width: 301px;
+  }
+}

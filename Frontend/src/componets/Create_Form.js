@@ -10,7 +10,6 @@ export default function Create_Form() {
   const [Deck_img, setDeck_Img] = useState("");
 
   const createHandler = (e) => {
-    // e.preventDefault();
     dispatch(createDeck(Deck_Name, Deck_img));
   };
 

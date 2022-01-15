@@ -42,21 +42,3 @@ export default function PokeCardModel({ open, children, onClose }) {
     document.getElementById("portal")
   );
 }
-
-//- before
-//   return (
-//     <>
-//           {loading ? (
-//         <Hourglass color="purple" />
-//       ) : error ? (
-//         <MessageBox variant="danger">{error}</MessageBox>
-//       ) : (
-//     <div>
-//       <h2>incomming</h2>
-//       <h2>{_card.name}</h2>
-
-//     </div>
-//       )}
-//     </>
-//   );
-// }
