@@ -18,7 +18,7 @@ export default function ExistingCard(P) {
       <div key={Pokemon._id} className="Card_Div">
         <img src={Pokemon.image} alt="Picture" className="bouder dim"></img>
 
-        <div className="Name_Background_E">
+        <div className={`Name_Background_${Pokemon.type} left10px`}>
           {Pokemon.name}
           <img
             src={`/img/type_${Pokemon.type}.png`}

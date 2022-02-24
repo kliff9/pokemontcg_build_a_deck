@@ -24,7 +24,7 @@ export default function PokeCard(P) {
           ></img>
         </a>
 
-        <div className="Name_Background">
+        <div className={`Name_Background_${Pokemon.type}`}>
           {Pokemon.name}
           <img
             src={`/img/type_${Pokemon.type}.png`}
@@ -63,7 +63,7 @@ export default function PokeCard(P) {
             ></img>
           </a>
 
-          <div className="Name_Background_E">
+          <div className={`Name_Background_${Pokemon.type} left10px`}>
             {Pokemon.name}
             <img
               src={`/img/type_${Pokemon.type}.png`}
