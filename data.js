@@ -117,6 +117,38 @@ const data = {
       description:
         "During your opponent's next turn, prevent all damage done to this Pokémon by attacks from Basic Pokémon.",
     },
+    {
+      name: "Ho-oh",
+      type: "fire",
+      image: "/img/Ho-oh.jpg",
+      energy: ["fire", "fire", "fire"],
+      description:
+        "During your opponent's next turn, prevent all damage done to this Pokémon by attacks from Basic Pokémon.",
+    },
+    {
+      name: "Entei",
+      type: "fire",
+      image: "/img/Entei.jpg",
+      energy: ["fire", "fire", "fire"],
+      description:
+        "During your opponent's next turn, prevent all damage done to this Pokémon by attacks from Basic Pokémon.",
+    },
+    {
+      name: "Raikou",
+      type: "electric",
+      image: "/img/Raikou.jpg",
+      energy: ["electric", "electric", "electric"],
+      description:
+        "During your opponent's next turn, prevent all damage done to this Pokémon by attacks from Basic Pokémon.",
+    },
+    {
+      name: "Suicune",
+      type: "water",
+      image: "/img/Suicune.jpg",
+      energy: ["water", "water", "water"],
+      description:
+        "During your opponent's next turn, prevent all damage done to this Pokémon by attacks from Basic Pokémon.",
+    },
   ],
 };
 export default data;
