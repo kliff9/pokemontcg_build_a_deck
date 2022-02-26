@@ -34,7 +34,7 @@ app.use('/api/players', user_Router);
 //    res.send(data.PokemonCards); // Only Show the Actual database with no variables
 //    });
 
-app.get('/', (req, res) => {
+app.get('/hello', (req, res) => {
   res.send('Hello World!')
 });
 
