@@ -9,6 +9,8 @@ const Deck_Schema = new mongoose.Schema(
         name: { type: String },
         image: { type: String },
         type: { type: String },
+        MoveName:{ type: String},
+        Damage: { type: String},
         energy: [String],
         description: { type: String },
       },

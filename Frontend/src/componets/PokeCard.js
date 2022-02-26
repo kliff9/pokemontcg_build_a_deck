@@ -41,8 +41,8 @@ export default function PokeCard(P) {
               className="energy_move energy_size"
             ></img>
           ))}
-          <h5 className="Move_Name"> Zapper Strike {Pokemon.MoveName}</h5>
-          <h5 className="MoveDamage"> 70 {Pokemon.Damage}</h5>
+          <h5 className="Move_Name">  {Pokemon.MoveName}</h5>
+          <h5 className="MoveDamage">  {Pokemon.Damage}</h5>
           <p className="MoveDescription">{Pokemon.description}</p>
         </div>
         <button
@@ -80,12 +80,10 @@ export default function PokeCard(P) {
                 className="energy_move energy_size"
               ></img>
             ))}
-            <h5 className="Move_Name"> Zapper Strike {Pokemon.MoveName}</h5>
-            <h5 className="MoveDamage"> 70 {Pokemon.Damage}</h5>
+            <h5 className="Move_Name">  {Pokemon.MoveName}</h5>
+            <h5 className="MoveDamage">  {Pokemon.Damage}</h5>
             <p className="MoveDescription">
-              {Pokemon.Move_Description}This Attack does Something you may not
-              think it dose nothing but in truth it does something so be
-              prepared to get some damaged done to you bro.
+              {Pokemon.description}
             </p>
           </div>
           <button

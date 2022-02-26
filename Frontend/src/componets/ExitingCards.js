@@ -35,8 +35,8 @@ export default function ExistingCard(P) {
               className="energy_move energy_size"
             ></img>
           ))}
-          <h5 className="Move_Name"> Zapper Strike {Pokemon.MoveName}</h5>
-          <h5 className="MoveDamage"> 70 {Pokemon.Damage}</h5>
+          <h5 className="Move_Name"> {Pokemon.MoveName}</h5>
+          <h5 className="MoveDamage"> {Pokemon.Damage}</h5>
           <p className="MoveDescription">
             {Pokemon.description}
           </p>

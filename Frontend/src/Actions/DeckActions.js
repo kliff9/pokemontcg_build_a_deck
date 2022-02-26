@@ -54,6 +54,8 @@ export const AddtoDeck = (cardId) => async (dispatch, getState) => {
       type: data.type,
       image: data.image,
       energy: data.energy,
+      MoveName:data.MoveName,
+      Damage: data.Damage,
       description: data.description,
       // _id: data.id,
     },
