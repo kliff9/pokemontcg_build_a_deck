@@ -19,4 +19,10 @@ User will be able to build a deck from choosing from a selction of cards.
 
 ## Website
 
-https://pkmntcg0.herokuapp.com/mydecks
+https://pkmntcg0.herokuapp.com
+
+## Preview
+
+
+https://user-images.githubusercontent.com/32655437/155839550-86d93965-8f95-4855-8534-26396ff6558e.mp4
+
