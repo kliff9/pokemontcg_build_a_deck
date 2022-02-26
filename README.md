@@ -15,7 +15,7 @@ User will be able to build a deck from choosing from a selction of cards.
 
 ◼ Node. js - An open source, cross-platform runtime environment for developing server-side and networking applications
 
-◼ MongoDB - MongoDB is a source-available cross-platform document-oriented database program.
+◼ MongoDB - A source-available cross-platform document-oriented database program.
 
 ## Website
 
